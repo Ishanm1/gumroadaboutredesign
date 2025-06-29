@@ -1,0 +1,746 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { CustomButton } from "@/components/custom-button"
+import { ParallaxImage } from "@/components/parallax-image"
+import { CategoryCard } from "@/components/category-card"
+import { TestimonialSection } from "@/components/testimonial-section"
+import { Footer } from "@/components/footer"
+
+export default function Component() {
+  return (
+    <div className="font-['ABC_Favorit'] text-base font-normal leading-relaxed tracking-tight text-black dark:bg-black dark:text-white">
+      <Header />
+
+      <main className="overflow-hidden">
+        {/* Hero Section */}
+        <section className="grid border-b border-black bg-gray-100">
+          <div className="relative flex items-center justify-center border-b border-black bg-gray-100 px-8 py-40 md:py-[12rem] lg:px-[8vw]">
+            <div className="z-10 flex max-w-screen-lg flex-col items-center gap-6 text-center">
+              <h1 className="leading-none text-6xl md:text-7xl lg:text-8xl">
+                Go from
+                <br className="sm:hidden" /> <span className="whitespace-nowrap">0 to $1</span>
+              </h1>
+              <p className="max-w-md text-xl lg:max-w-3xl lg:text-2xl">
+                Anyone can earn their first dollar online. Just start with what you know, see what sticks, and get paid.
+                It&apos;s that easy.
+              </p>
+              <div className="mx-auto mt-2 flex w-full max-w-[384px] flex-col items-center justify-center gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:gap-4">
+                <div className="w-full sm:w-auto [&>div]:!block">
+                  <CustomButton href="/users/sign_up" size="lg" shadowColor="red">
+                    Start selling
+                  </CustomButton>
+                </div>
+                <form action="/discover" method="get" className="relative w-full sm:w-auto">
+                  <label htmlFor="marketplace-search" className="sr-only">
+                    Search marketplace
+                  </label>
+                  <input
+                    id="marketplace-search"
+                    type="text"
+                    name="query"
+                    placeholder="Search marketplace ..."
+                    className="!h-14 w-full rounded-md border !border-gray-200 px-4 pr-12 !text-xl focus:border-black focus:outline-none focus:ring-1 focus:ring-black lg:!h-16 sm:w-64"
+                  />
+                  <button
+                    type="submit"
+                    aria-label="Search"
+                    className="absolute right-0 top-1/2 mr-3 -translate-y-[55%]"
+                  >
+                    <svg
+                      className="h-6 w-6 text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div className="text-base">
+                Contribute or fork on{" "}
+                <Link
+                  href="https://github.com/antiwork/gumroad"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 inline-flex items-center gap-1 underline hover:text-black"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                  </svg>
+                  GitHub
+                </Link>
+              </div>
+            </div>
+            <div className="pointer-events-none absolute inset-0 overflow-visible">
+              <ParallaxImage
+                src="/images/coin-1.svg"
+                alt="Decorative coin 1"
+                width={192}
+                height={192}
+                className="invisible absolute right-[-3rem] top-[20rem] z-[1] w-[8rem] sm:visible sm:w-[8rem] md:right-[15rem] md:top-[58rem] md:w-[10rem] lg:top-[55rem] lg:w-[12rem]"
+                parallaxIntensity={0.03}
+              />
+              <ParallaxImage
+                src="/images/coin-2.svg"
+                alt="Decorative coin 2"
+                width={192}
+                height={192}
+                className="absolute left-[-12vw] top-[28rem] z-[1] w-[10rem] sm:left-[-7vw] md:left-[3vw] md:top-[30rem] md:w-[11rem] md:left-[8vw]"
+                parallaxIntensity={-0.02}
+              />
+              <ParallaxImage
+                src="/images/coin-3.svg"
+                alt="Decorative coin 3"
+                width={192}
+                height={192}
+                className="invisible absolute right-[-3vw] top-[-7rem] z-[1] w-[9rem] sm:visible md:right-[6vw] md:top-[26rem] md:w-[8rem]"
+                parallaxIntensity={0.05}
+              />
+              <ParallaxImage
+                src="/images/coin-4.svg"
+                alt="Decorative Coin 4"
+                width={192}
+                height={192}
+                className="absolute right-[-14vw] top-[53rem] z-[1] w-[9rem] sm:right-[-5rem] sm:top-[42rem] md:right-[-5rem] md:top-[44rem] md:w-[11rem] lg:right-[-4rem] lg:top-[46rem] lg:w-[12rem]"
+                parallaxIntensity={-0.035}
+              />
+              <ParallaxImage
+                src="/images/coin-5.svg"
+                alt="Decorative Coin 5"
+                width={192}
+                height={192}
+                className="absolute left-[-2rem] top-[63rem] z-[1] w-[10rem] sm:left-[3rem] sm:top-[50rem] md:left-[-6rem] md:top-[45rem] md:w-[14rem] lg:left-[-3rem] lg:w-[16rem]"
+                parallaxIntensity={0.04}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* You know all those great ideas you have? */}
+        <section className="relative py-24 lg:border-b lg:border-black lg:py-32">
+          <div className="px-8 lg:px-[4vw]">
+            <h2 className="mx-auto mb-20 max-w-4xl text-center text-4xl lg:mb-24 lg:leading-tight lg:text-5xl">
+              You know all those great ideas you have?
+            </h2>
+          </div>
+          <div className="relative mx-auto mb-12 h-80 max-w-6xl border-y border-black bg-orange p-8 lg:rounded-full lg:border">
+            <div
+              id="lottie-animation"
+              className="absolute left-1/2 top-1/2 z-20 h-56 w-56 -translate-x-1/2 -translate-y-1/2 lg:top-20 lg:h-80 lg:w-80"
+            >
+              {/* Placeholder for Lottie animation */}
+              <Image
+                src="/images/gumhead.png"
+                alt="Gumhead illustration"
+                width={320}
+                height={320}
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <div className="relative z-10 flex h-full flex-col justify-between rounded-2xl border border-black bg-orange lg:rounded-full lg:px-8">
+              <div className="hidden px-4 justify-between -mt-3 lg:flex lg:px-40">
+                <div className="flex h-6 items-center bg-orange pr-6 lg:gap-x-10">
+                  <Image
+                    alt="Right arrow"
+                    className="h-6 w-6 -translate-x-3"
+                    src="/images/arrowhead-right.svg"
+                    width={24}
+                    height={24}
+                  />
+                  <div className="lg:text-2xl">The Gumroad Way</div>
+                </div>
+                <div className="flex h-6 items-center bg-orange pr-6 lg:gap-x-10">
+                  <Image
+                    alt="Right arrow"
+                    className="h-6 w-6 -translate-x-3"
+                    src="/images/arrowhead-right.svg"
+                    width={24}
+                    height={24}
+                  />
+                  <div className="lg:text-2xl">Start Small</div>
+                </div>
+              </div>
+              <div className="hidden px-4 justify-between -mb-3 lg:flex lg:px-40">
+                <div className="flex h-6 items-center bg-orange pl-6 lg:gap-x-10">
+                  <div className="lg:text-2xl">Get Better Together</div>
+                  <Image
+                    alt="Left arrow"
+                    className="h-6 w-6 rotate-180 translate-x-3"
+                    src="/images/arrowhead-right.svg"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex h-6 items-center bg-orange pl-6 lg:gap-x-10">
+                  <div className="lg:text-2xl">Learn Quickly</div>
+                  <Image
+                    alt="Left arrow"
+                    className="h-6 w-6 rotate-180 translate-x-3"
+                    src="/images/arrowhead-right.svg"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+              </div>
+              {/* Mobile arrows */}
+              <div className="absolute left-1/2 top-0 -ml-2 -mt-3 flex h-6 items-center bg-orange pr-3 -translate-x-1/2 lg:hidden">
+                <Image
+                  alt="Right arrow"
+                  className="h-4 w-4 -translate-x-2 -translate-y-px"
+                  src="/images/arrowhead-right.svg"
+                  width={16}
+                  height={16}
+                />
+                <div className="whitespace-nowrap lg:text-2xl">The Gumroad Way</div>
+              </div>
+              <div className="absolute right-0 top-1/2 flex h-6 items-center origin-center rotate-90 pr-3 translate-x-1/2 -translate-y-1/2 lg:hidden">
+                <Image
+                  alt="Right arrow"
+                  className="h-4 w-4 -translate-x-2 -translate-y-px"
+                  src="/images/arrowhead-right.svg"
+                  width={16}
+                  height={16}
+                />
+                <div className="whitespace-nowrap lg:text-2xl">Start Small</div>
+              </div>
+              <div className="absolute bottom-0 left-1/2 -ml-2 -mb-3 flex h-6 items-center bg-orange pl-3 -translate-x-1/2 lg:hidden">
+                <div className="whitespace-nowrap lg:text-2xl">Get Better Together</div>
+                <Image
+                  alt="Left arrow"
+                  className="h-4 w-4 rotate-180 translate-x-2 translate-y-px"
+                  src="/images/arrowhead-right.svg"
+                  width={16}
+                  height={16}
+                />
+              </div>
+              <div className="absolute left-0 top-1/2 flex h-6 items-center origin-center -rotate-90 pr-3 -translate-x-1/2 -translate-y-1/2 lg:hidden">
+                <Image
+                  alt="Right arrow"
+                  className="h-4 w-4 -translate-x-2 -translate-y-px"
+                  src="/images/arrowhead-right.svg"
+                  width={16}
+                  height={16}
+                />
+                <div className="whitespace-nowrap lg:text-2xl">Learn Quickly</div>
+              </div>
+            </div>
+          </div>
+          <div className="mx-auto flex max-w-4xl flex-col gap-4 px-8 text-center">
+            <h2 className="text-4xl lg:leading-tight lg:text-5xl">
+              We want you to try them, lots of them, and find out what works.
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl">
+              You don&apos;t have to be a tech expert or even understand how to start a business. You just gotta take
+              what you know and sell it.
+            </p>
+            <div className="mt-4 w-full">
+              <CustomButton href="/features" size="lg" shadowColor="red">
+                Find out how
+              </CustomButton>
+            </div>
+          </div>
+        </section>
+
+        {/* Don't take risks / Place small bets */}
+        <section className="flex flex-col border-b border-black overflow-hidden lg:flex-row">
+          <div className="flex items-center justify-center border-b bg-violet px-4 py-16 text-center md:p-24 lg:w-1/2 lg:border-b-0 lg:border-r xl:p-32">
+            <div className="max-w-xl space-y-12 md:space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-medium text-5xl lg:text-6xl">Don&apos;t take risks. That&apos;s scary!</h3>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center bg-pink px-4 py-16 text-center md:p-16 lg:w-1/2 xl:p-32">
+            <div className="max-w-xl space-y-12 md:space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-medium text-5xl lg:text-6xl">Place small bets. That&apos;s exciting!</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Instead of selling a book / start by selling a blog post */}
+        <section className="flex flex-col overflow-hidden border-b border-black lg:flex-row">
+          <div className="flex items-center justify-center border-b bg-black p-8 py-24 sm:p-32 md:p-32 lg:w-1/2 lg:border-b-0 lg:border-r lg:py-24 xl:p-36">
+            <div className="relative w-full max-w-xl">
+              <Image
+                alt="Sell anywhere feature illustration"
+                className="mx-auto h-auto w-full object-cover"
+                src="/images/book-gumhead.svg"
+                width={600}
+                height={400}
+              />
+              <div className="absolute left-0 top-[-4rem] rounded-3xl border border-black bg-white px-6 py-4 sm:left-[-4rem] sm:px-12 sm:py-8">
+                <p className="m-0 font-medium text-xl">Instead of selling a book...</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center bg-orange p-8 py-24 sm:p-32 md:p-32 lg:w-1/2 lg:py-24 xl:p-32">
+            <div className="relative">
+              <Image
+                alt="Sell anywhere feature illustration"
+                className="mx-auto h-auto w-full object-cover"
+                src="/images/blog-post.svg"
+                width={600}
+                height={400}
+              />
+              <div className="absolute left-0 top-[-4rem] rounded-3xl border border-black bg-white px-6 py-4 sm:left-[-4rem] sm:px-12 sm:py-8">
+                <p className="m-0 font-medium text-xl">...start by selling a blog post!</p>
+              </div>
+              <ParallaxImage
+                src="/images/exciting.svg"
+                alt="Exciting sticker"
+                width={320}
+                height={320}
+                className="absolute -bottom-12 right-0 z-10 w-36 rotate-6 sm:-bottom-48 sm:-right-40 sm:w-48 md:w-56 lg:-right-16 lg:w-48 xl:-right-0 xl:w-80"
+                parallaxIntensity={0.05}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Make your own road */}
+        <section className="px-8 pb-24 pt-20 md:px-12 md:pb-32 md:pt-24">
+          <div className="mx-auto max-w-5xl">
+            <div className="flex flex-col items-start space-y-7 text-left md:items-center md:text-center">
+              <h2 className="font-medium text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Make your own road</h2>
+              <p className="text-lg md:text-2xl xl:leading-10 xl:text-3xl">
+                Whether you need more balance, flexibility, or just a different gig, we make it easier to chart a new
+                path. You don&apos;t have to be a tech expert or even understand how to start a business. You just gotta
+                take what you know and sell it.
+              </p>
+              <Link href="/features" className="group relative inline-flex items-center text-xl font-bold no-underline">
+                <span className="relative inline-flex items-center gap-2">
+                  Explore Features
+                  <span>→</span>
+                  <span className="absolute -bottom-1 left-0 h-[0.1em] w-full origin-left scale-x-0 transform bg-black transition-transform group-hover:scale-x-100" />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Sell anything */}
+        <section className="flex flex-col overflow-hidden border-t border-black lg:flex-row">
+          <div className="h-auto overflow-hidden bg-green lg:w-1/2 lg:border-r">
+            <div className="relative">
+              <Image
+                alt="Sell anything feature illustration"
+                className="h-auto w-full pr-[7.5vw]"
+                src="/images/home-feature-1.svg"
+                width={800}
+                height={600}
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center bg-white px-8 py-16 sm:p-12 md:p-16 lg:w-1/2 xl:p-24">
+            <div className="max-w-2xl space-y-12 md:space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-medium text-3xl lg:text-4xl xl:text-5xl">Sell anything</h3>
+                <p className="text-lg lg:text-xl xl:text-2xl">
+                  Video lessons. Monthly subscriptions. Whatever! Gumroad was created to help you experiment with all
+                  kinds of ideas and formats.
+                </p>
+              </div>
+              <ul className="grid list-none grid-cols-1 gap-3 pl-0 text-lg md:grid-cols-2">
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your Top 10 lists
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your crypto tips
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your fractal pack
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your keto cookbook
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your C4D scenes
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Sell your new emojis
+                </li>
+                <li className="flex items-center">
+                  <span className="mr-2">→</span>
+                  Seriously, sell anything!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial 1 */}
+        <TestimonialSection
+          bgColor="bg-pink"
+          quote="“I launched MaxPacks as an experimental side gig; but within 2 years those Procreate brushes were earning more than my 6-figure salary in CG. Leaving in favor of Gumroad enabled me to explore other aspects of my art, develop new hobbies, and finally prioritize my personal life.”"
+          author="Max Ulichney sells Procreate Brush Packs"
+          authorLink="https://maxulichney.gumroad.com/?recommended_by=search"
+          authorGumroadHandle="maxulichney"
+          portraitSrc="/images/max.png"
+          illustration1Src="/images/writing.svg"
+          illustration1Alt="Hand writing illustration"
+          illustration1ClassName="-bottom-12 -left-6 sm:-left-8"
+          reverseLayout={false}
+        />
+
+        {/* Sell to anyone */}
+        <section className="flex flex-col overflow-hidden border-t border-black lg:flex-row">
+          <div className="flex items-center justify-center border-b bg-black p-8 py-24 sm:p-12 md:p-16 lg:w-1/2 lg:border-b-0 lg:border-r xl:p-32">
+            <div className="relative">
+              <Image
+                alt="Sell to anyone feature illustration"
+                className="h-auto w-full"
+                src="/images/home-feature-2.svg"
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center bg-white p-8 py-16 sm:p-12 md:p-16 lg:w-1/2 xl:p-32">
+            <div className="max-w-2xl space-y-12 md:space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-medium text-3xl lg:text-4xl xl:text-5xl">Sell to anyone</h3>
+                <p className="text-lg lg:text-xl xl:text-2xl">
+                  Build a loyal following with simple posts, email newsletters, and automated workflows. Plus let your
+                  customers pay what they want or choose between one-time, recurring, or fixed-length payments in your
+                  currency of choice. (We&apos;ll handle the fine print, like VAT).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonial 2 */}
+        <TestimonialSection
+          bgColor="bg-green"
+          quote="“Originally, I took pre-orders for my Trend Reports on Gumroad. But I received... exactly $0. So I changed tactics: I made half of my report free, and the other half paid. Today, 99% of Trends.VC revenue is recurring in the form of annual and quarterly subscriptions.”"
+          author="Dru Riley sells business insights and expertise"
+          authorLink="https://trendsvc.gumroad.com/?recommended_by=search"
+          authorGumroadHandle="trendsvc"
+          portraitSrc="/images/dru.png"
+          illustration1Src="/images/free.svg"
+          illustration1Alt="Free illustration"
+          illustration1ClassName="-top-4 -right-4 sm:w-48 md:w-64 md:-top-8 md:-right-8"
+          illustration2Src="/images/book.svg"
+          illustration2Alt="Book illustration"
+          illustration2ClassName="-bottom-4 -left-4 sm:w-48 md:w-64 md:-bottom-8 md:-left-32"
+          reverseLayout={false}
+        />
+
+        {/* Sell anywhere */}
+        <section className="flex flex-col overflow-hidden border-t border-black lg:flex-row">
+          <div className="flex items-center justify-center border-b bg-orange p-8 py-24 sm:p-12 md:p-16 lg:w-1/2 lg:border-b-0 lg:border-r lg:py-24 xl:p-32">
+            <div className="relative">
+              <Image
+                alt="Sell anywhere feature illustration"
+                className="h-auto w-full"
+                src="/images/home-feature-4.svg"
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-center bg-white p-8 py-16 sm:p-12 md:p-16 lg:w-1/2 xl:p-32">
+            <div className="max-w-2xl space-y-12 md:space-y-8">
+              <div className="space-y-4">
+                <h3 className="font-medium text-3xl lg:text-4xl xl:text-5xl">Sell anywhere</h3>
+                <p className="text-lg lg:text-xl xl:text-2xl">
+                  Create and customize your storefront with our all-in-one platform or choose to use your personal site
+                  instead. With Zapier, you can seamlessly connect your Gumroad account to thousands of apps in your
+                  current stack.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Looking for inspiration */}
+        <section className="flex flex-col gap-16 border-t border-black px-8 py-16 lg:gap-24 lg:px-[4vw] lg:py-24">
+          <div className="mx-auto flex max-w-5xl flex-col justify-center gap-10 text-center">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl">Looking for inspiration on what you can sell?</h2>
+            <p className="text-lg md:text-2xl lg:text-3xl">
+              Discover the best-selling products and creators on Gumroad
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" role="list">
+            <CategoryCard
+              title="3D"
+              description="Perfect your craft with the same tools used at Dreamworks and Pixar."
+              imageUrl="/images/category-3d.svg"
+              href="https://gumroad.com/3d"
+              tags={[
+                { name: "blender", href: "https://gumroad.com/3d?tags=blender" },
+                { name: "3d model", href: "https://gumroad.com/3d?tags=3d+model" },
+                { name: "spark ar", href: "https://gumroad.com/3d?tags=spark+ar" },
+              ]}
+              bgColor="bg-green"
+            />
+            <CategoryCard
+              title="Audio"
+              description="Open your ears and mind to interviews, meditations, and true crime thrillers."
+              imageUrl="/images/category-audio.svg"
+              href="https://gumroad.com/audio"
+              tags={[
+                { name: "meditation", href: "https://gumroad.com/audio?tags=meditation" },
+                { name: "hypnosis", href: "https://gumroad.com/audio?tags=hypnosis" },
+                { name: "subliminal messages", href: "https://gumroad.com/audio?tags=subliminal+messages" },
+              ]}
+              bgColor="bg-red"
+            />
+            <CategoryCard
+              title="Business & Money"
+              description="Learn to earn in an increasingly unpredictable world."
+              imageUrl="/images/category-business.svg"
+              href="https://gumroad.com/business-and-money"
+              tags={[
+                { name: "notion template", href: "https://gumroad.com/business-and-money?tags=notion+template" },
+                { name: "investing", href: "https://gumroad.com/business-and-money?tags=investing" },
+                { name: "instagram", href: "https://gumroad.com/business-and-money?tags=instagram" },
+              ]}
+              bgColor="bg-green"
+            />
+            <CategoryCard
+              title="Comics & Graphic Novels"
+              description="Sequential art with loads of heart. Welcome to a paradise of panels."
+              imageUrl="/images/category-comics.svg"
+              href="https://gumroad.com/comics-and-graphic-novels"
+              tags={[
+                { name: "comic", href: "https://gumroad.com/comics-and-graphic-novels?tags=comic" },
+                { name: "manga", href: "https://gumroad.com/comics-and-graphic-novels?tags=manga" },
+                { name: "anime", href: "https://gumroad.com/comics-and-graphic-novels?tags=anime" },
+              ]}
+              bgColor="bg-yellow"
+            />
+            <CategoryCard
+              title="Design"
+              description="Code, design, and ship your dream product with these technical resources."
+              imageUrl="/images/category-design.svg"
+              href="https://gumroad.com/design"
+              tags={[
+                { name: "textures", href: "https://gumroad.com/design?tags=textures" },
+                { name: "mockup", href: "https://gumroad.com/design?tags=mockup" },
+                { name: "font", href: "https://gumroad.com/design?tags=font" },
+              ]}
+              bgColor="bg-orange"
+            />
+            <CategoryCard
+              title="Drawing & Painting"
+              description="Tutorials, plugins, and brushes from pro concept artists and illustrators."
+              imageUrl="/images/category-drawing.svg"
+              href="https://gumroad.com/drawing-and-painting"
+              tags={[
+                { name: "procreate", href: "https://gumroad.com/drawing-and-painting?tags=procreate" },
+                { name: "brushes", href: "https://gumroad.com/drawing-and-painting?tags=brushes" },
+                { name: "art", href: "https://gumroad.com/drawing-and-painting?tags=art" },
+              ]}
+              bgColor="bg-violet"
+            />
+            <CategoryCard
+              title="Education"
+              description="Pick up a new skill with courses and guides from world-class pros."
+              imageUrl="/images/category-education.svg"
+              href="https://gumroad.com/education"
+              tags={[
+                { name: "education", href: "https://gumroad.com/education?tags=education" },
+                { name: "certification exams", href: "https://gumroad.com/education?tags=certification+exams" },
+                { name: "learning", href: "https://gumroad.com/education?tags=learning" },
+              ]}
+              bgColor="bg-green"
+            />
+            <CategoryCard
+              title="Fiction Books"
+              description="Short stories, novellas, and epic tomes full of interesting characters and worlds."
+              imageUrl="/images/category-writing.svg"
+              href="https://gumroad.com/fiction-books"
+              tags={[
+                { name: "sci-fi", href: "https://gumroad.com/fiction-books?tags=sci-fi" },
+                { name: "poetry", href: "https://gumroad.com/fiction-books?tags=poetry" },
+                { name: "fiction", href: "https://gumroad.com/fiction-books?tags=fiction" },
+              ]}
+              bgColor="bg-violet"
+            />
+            <CategoryCard
+              title="Films"
+              description="Have a movie night with some of the best stories to hit the small screen."
+              imageUrl="/images/category-film.svg"
+              href="https://gumroad.com/films"
+              tags={[
+                { name: "after effects", href: "https://gumroad.com/films?tags=after+effects" },
+                { name: "vj loops", href: "https://gumroad.com/films?tags=vj+loops" },
+                { name: "luts", href: "https://gumroad.com/films?tags=luts" },
+              ]}
+              bgColor="bg-red"
+            />
+            <CategoryCard
+              title="Fitness & Health"
+              description="Whether you're looking to shed or shred, here are coaches to pump you up."
+              imageUrl="/images/category-sports.svg"
+              href="https://gumroad.com/fitness-and-health"
+              tags={[
+                { name: "fitness", href: "https://gumroad.com/fitness-and-health?tags=fitness" },
+                { name: "workout program", href: "https://gumroad.com/fitness-and-health?tags=workout+program" },
+                { name: "yoga", href: "https://gumroad.com/fitness-and-health?tags=yoga" },
+              ]}
+              bgColor="bg-orange"
+            />
+            <CategoryCard
+              title="Gaming"
+              description="Explore new worlds from the world's most creative indie developers."
+              imageUrl="/images/category-games.svg"
+              href="https://gumroad.com/gaming"
+              tags={[
+                { name: "vrchat", href: "https://gumroad.com/gaming?tags=vrchat" },
+                { name: "avatar", href: "https://gumroad.com/gaming?tags=avatar" },
+                { name: "assets", href: "https://gumroad.com/gaming?tags=assets" },
+              ]}
+              bgColor="bg-red"
+            />
+            <CategoryCard
+              title="Music & Sound Design"
+              description="Tracks, beats, and loops from the best musicians and engineers in the biz."
+              imageUrl="/images/category-music.svg"
+              href="https://gumroad.com/music-and-sound-design"
+              tags={[
+                { name: "ableton", href: "https://gumroad.com/music-and-sound-design?tags=ableton" },
+                { name: "sample pack", href: "https://gumroad.com/music-and-sound-design?tags=sample+pack" },
+                { name: "sheet music", href: "https://gumroad.com/music-and-sound-design?tags=sheet+music" },
+              ]}
+              bgColor="bg-yellow"
+            />
+            <CategoryCard
+              title="Photography"
+              description="Get snapping with pro presets, stock imagery, and digi darkroom needs."
+              imageUrl="/images/category-photography.svg"
+              href="https://gumroad.com/photography"
+              tags={[
+                { name: "reference photos", href: "https://gumroad.com/photography?tags=reference+photos" },
+                { name: "stock photos", href: "https://gumroad.com/photography?tags=stock+photos" },
+                { name: "photobash", href: "https://gumroad.com/photography?tags=photobash" },
+              ]}
+              bgColor="bg-green"
+            />
+            <CategoryCard
+              title="Recorded Music"
+              description="Tracks and albums from the best musicians and artists in the biz."
+              imageUrl="/images/category-music.svg"
+              href="https://gumroad.com/recorded-music"
+              tags={[
+                { name: "singles", href: "https://gumroad.com/recorded-music?tags=singles" },
+                { name: "jazz", href: "https://gumroad.com/recorded-music?tags=jazz" },
+                { name: "instrumental music", href: "https://gumroad.com/recorded-music?tags=instrumental+music" },
+              ]}
+              bgColor="bg-yellow"
+            />
+            <CategoryCard
+              title="Self Improvement"
+              description="Move your body and your audience with guides, videos, and more."
+              imageUrl="/images/category-dance.svg"
+              href="https://gumroad.com/self-improvement"
+              tags={[
+                { name: "coloring page", href: "https://gumroad.com/self-improvement?tags=coloring+page" },
+                { name: "printable", href: "https://gumroad.com/self-improvement?tags=printable" },
+                { name: "productivity", href: "https://gumroad.com/self-improvement?tags=productivity" },
+              ]}
+              bgColor="bg-red"
+            />
+            <CategoryCard
+              title="Software Development"
+              description="Learn to code and tools to help you code more productively."
+              imageUrl="/images/category-software.svg"
+              href="https://gumroad.com/software-development"
+              tags={[
+                { name: "programming", href: "https://gumroad.com/software-development?tags=programming" },
+                { name: "windows", href: "https://gumroad.com/software-development?tags=windows" },
+                { name: "theme", href: "https://gumroad.com/software-development?tags=theme" },
+              ]}
+              bgColor="bg-yellow"
+            />
+            <CategoryCard
+              title="Writing & Publishing"
+              description="Fill your brain with words and wisdom from creative authors and storytellers."
+              imageUrl="/images/category-writing.svg"
+              href="https://gumroad.com/writing-and-publishing"
+              tags={[
+                { name: "kdp interior", href: "https://gumroad.com/writing-and-publishing?tags=kdp+interior" },
+                { name: "ebook", href: "https://gumroad.com/writing-and-publishing?tags=ebook" },
+                {
+                  name: "low content books",
+                  href: "https://gumroad.com/writing-and-publishing?tags=low+content+books",
+                },
+              ]}
+              bgColor="bg-violet"
+            />
+          </div>
+        </section>
+
+        {/* Testimonial 3 */}
+        <TestimonialSection
+          bgColor="bg-pink"
+          quote="&quot;For years, I had a goal to develop 'passive' income streams, but struggled to make that a reality. Last year, I started selling informational products on Gumroad and since then have made $10k+ per month building products that I love.&quot;"
+          author="Steph Smith sells content tutorials"
+          authorLink="https://stephsmithio.gumroad.com/?recommended_by=search"
+          authorGumroadHandle="stephsmithio"
+          portraitSrc="/images/stephsmithio.png"
+          illustration1Src="/images/dollar.svg"
+          illustration1Alt="Dollar symbol illustration"
+          illustration1ClassName="top-8 left-0 w-16 sm:w-24 md:top-10 md:left-12"
+          illustration2Src="/images/how-to-colors.svg"
+          illustration2Alt="Decorative colors illustration"
+          illustration2ClassName="-bottom-4 -right-8 w-36 sm:w-64 md:-bottom-8 md:-right-12"
+          reverseLayout={false}
+        />
+
+        {/* Income earned section */}
+        <section className="relative w-full border-t border-black bg-white">
+          <div className="my-20 flex flex-col justify-center gap-8 px-8 text-center md:my-40 md:items-center md:gap-16">
+            <h1 className="text-left font-medium text-5xl sm:text-7xl md:text-center md:text-9xl lg:text-[12rem] md:leading-[0.9]">
+              $3,129,297
+            </h1>
+            <p className="max-w-screen-sm text-left text-2xl md:text-center md:text-3xl">
+              The amount of income earned by Gumroad digital entrepreneurs last week.
+            </p>
+          </div>
+        </section>
+
+        {/* New sale illustration */}
+        <Image
+          alt="New sale illustration"
+          className="min-h-[300px] w-full object-cover"
+          src="/images/new-sale.svg"
+          width={1920}
+          height={300}
+        />
+
+        {/* Share your work CTA */}
+        <section className="border-t border-black bg-pink px-8 py-16 lg:px-[4vw] lg:py-24">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-8">
+            <h1 className="text-center font-medium text-4xl sm:text-5xl lg:text-7xl">
+              {" "}
+              Share your work. <br /> Someone out there needs it.
+            </h1>
+            <CustomButton href="/users/sign_up" size="lg" shadowColor="red">
+              Start selling
+            </CustomButton>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}
